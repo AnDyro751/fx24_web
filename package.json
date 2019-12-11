@@ -1,0 +1,62 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "Azachii Starter | Created by Azachii Develop",
+  "version": "0.1.0",
+  "author": "Azachii Develop",
+  "dependencies": {
+    "bootstrap-4-grid": "^3.2.0",
+    "classnames": "^2.2.6",
+    "firebase": "^7.4.0",
+    "gatsby": "^2.17.11",
+    "gatsby-background-image": "^0.9.6",
+    "gatsby-image": "^2.2.33",
+    "gatsby-plugin-facebook-pixel": "^1.0.3",
+    "gatsby-plugin-firebase": "git+https://github.com/AnDyro751/firebase-gatsby.git",
+    "gatsby-plugin-manifest": "^2.2.28",
+    "gatsby-plugin-nprogress": "^2.1.14",
+    "gatsby-plugin-offline": "^3.0.19",
+    "gatsby-plugin-page-creator": "^2.1.30",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-purgecss": "^4.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.15",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sharp": "^2.2.37",
+    "gatsby-plugin-transition-link": "^1.16.2",
+    "gatsby-source-filesystem": "^2.1.36",
+    "gatsby-transformer-sharp": "^2.3.3",
+    "gsap": "^3.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-animated-burgers": "^1.2.7",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.8.0",
+    "react-lazy-load-image-component": "^1.3.2",
+    "react-responsive-carousel": "^3.1.51",
+    "react-reveal": "^1.2.2",
+    "react-tooltip": "^3.11.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

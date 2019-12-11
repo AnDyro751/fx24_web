@@ -1,0 +1,29 @@
+.main_cookie{
+    position: fixed;
+    z-index: 100;
+    width: 30%;
+    bottom: 2em;
+    right: 1em;
+    padding: 1em;
+    background: #DAE3D9;
+    border-radius: 3px;
+}
+.main_cookie p{
+    font-size: .85em;
+}
+.main_close{
+    position: absolute;
+    right: 1em;
+    top: -1em;
+    background: #181818;
+    border-radius: 100px;
+    height: 2em;
+    width: 2em;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
+}

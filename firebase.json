@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "sfx247",
+    "appAssociation": "AUTO",
+    "rewrites": [{ "source": "/**", "dynamicLinks": true }],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
