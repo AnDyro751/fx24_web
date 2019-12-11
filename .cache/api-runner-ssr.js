@@ -15,7 +15,7 @@ var plugins = [{
       options: {"plugins":[],"features":{"auth":true,"database":false,"firestore":true,"storage":false,"messaging":true,"functions":false,"remoteConfig":true,"config":true,"analytics":true}},
     },{
       plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/icon.png"},
+      options: {"plugins":[],"name":"Forex 24","short_name":"FX 24","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/circular_icon.png"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

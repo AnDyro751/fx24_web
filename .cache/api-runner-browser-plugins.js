@@ -12,7 +12,7 @@ module.exports = [{
       options: {"plugins":[],"features":{"auth":true,"database":false,"firestore":true,"storage":false,"messaging":true,"functions":false,"remoteConfig":true,"config":true,"analytics":true}},
     },{
       plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/icon.png"},
+      options: {"plugins":[],"name":"Forex 24","short_name":"FX 24","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/circular_icon.png"},
     },{
       plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
