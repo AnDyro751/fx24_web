@@ -1,20 +1,20 @@
 var plugins = [{
-      plugin: require('/home/andyro/Code/JS/forex_web/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/andyro/Code/JS/forex_web/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
+      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/andyro/Code/JS/forex_web/node_modules/gatsby-plugin-facebook-pixel/gatsby-ssr'),
+      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-facebook-pixel/gatsby-ssr'),
       options: {"plugins":[],"pixelId":"2470687473147176"},
     },{
-      plugin: require('/home/andyro/Code/JS/forex_web/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
+      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":[{"family":"Cinzel Decorative:","variants":["900"]},{"family":"Alata"}]},
     },{
-      plugin: require('/home/andyro/Code/JS/forex_web/node_modules/gatsby-plugin-firebase/gatsby-ssr'),
+      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-firebase/gatsby-ssr'),
       options: {"plugins":[],"features":{"auth":true,"database":false,"firestore":true,"storage":false,"messaging":true,"functions":false,"remoteConfig":true,"config":true,"analytics":true}},
     },{
-      plugin: require('/home/andyro/Code/JS/forex_web/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/icon.png"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

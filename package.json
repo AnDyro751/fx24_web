@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "forex-24",
   "private": true,
-  "description": "Azachii Starter | Created by Azachii Develop",
+  "description": "Forex 24 | Created by Azachii Develop",
   "version": "0.1.0",
   "author": "Azachii Develop",
   "dependencies": {
@@ -38,6 +38,12 @@
     "react-tooltip": "^3.11.1"
   },
   "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -50,7 +56,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint --init"
   },
   "repository": {
     "type": "git",
