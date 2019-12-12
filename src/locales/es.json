@@ -1,13 +1,31 @@
 {
   "es": {
     "fields": {
-      "name": "Nombre",
-      "username": "Nombre de usuario",
-      "email": "Correo electrónico",
-      "password": "Contraseña"
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Richard Hendricks"
+      },
+      "username": {
+        "label": "Nombre de usuario",
+        "placeholder": "richardhen"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "richard@piedpiper.com"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "******"
+      }
     },
-    "indexPage": {
-      "title": ""
+    "components": {
+      "forms": {
+        "signUp": {
+          "title": "Regístrate",
+          "message": "Crea una cuenta en FX 24 para acceder a todo el contenido",
+          "button": "Regístrate"
+        }
+      }
     }
   }
 }

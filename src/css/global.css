@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
 html,
 body {
     margin: 0;
@@ -10,7 +13,6 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
 p,
 h1,
 h2,
@@ -22,19 +24,27 @@ button,
 input,
 textarea,
 a {
-    font-family: 'Alata', sans-serif;
+    font-family: 'Heebo', sans-serif;
     margin: 0 !important;
     text-decoration: none;
     color: #181818;
 }
+button {
+    padding: 0.5em 0.8em;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    background-color: #03030D;
+    color: white;
+    font-size: 1.2em;
+    outline: none;
+    text-transform: uppercase;
+  }
 small {
     color: #637382;
 }
 ::-webkit-scrollbar {
     display: none;
-}
-.main_font {
-    font-family: 'Alata', sans-serif;
 }
 input, textarea {
 	width: 100%;
@@ -84,7 +94,6 @@ input:focus {
 .u__small_margin_bottom {
     margin: 0 0 1em 0;
 }
-
 .u__text_center {
     text-align: center;
 }
@@ -93,6 +102,16 @@ input:focus {
 }
 .u__normal_font {
     font-weight: normal;
+}
+
+/* Area */
+.full_height {
+    height: 100vh;
+}
+
+/* Decorations */
+.with_elevation {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.03), 0 2px 1px rgba(0, 0, 0, 0.03);
 }
 
 /* COLORS */
@@ -111,4 +130,3 @@ input:focus {
 .accent_color_dark{
     background: #e79128;
 }
-/* END COLORS */
