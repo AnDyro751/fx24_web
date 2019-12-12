@@ -1,0 +1,9 @@
+.full_page_loading {
+  height: 100vh;
+  width: 100%;
+}
+.full_page_loading_title {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+}

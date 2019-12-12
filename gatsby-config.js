@@ -25,15 +25,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
-        fonts: [
-          {
-            family: 'Cinzel Decorative:',
-            variants: ['900'],
-          },
-          {
-            family: 'Alata',
-          },
-        ],
       },
     },
     {

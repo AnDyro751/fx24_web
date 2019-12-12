@@ -1,3 +1,6 @@
+* {
+    color: #181818;
+}
 html,
 body {
     margin: 0;
@@ -26,11 +29,12 @@ a {
     margin: 0 !important;
     text-decoration: none;
 }
-
+small {
+    color: #637382;
+}
 ::-webkit-scrollbar {
     display: none;
 }
-
 .main_font {
     font-family: 'Alata', sans-serif;
 }
@@ -38,41 +42,28 @@ a {
 .u__no_select {
     user-select: none;
 }
-
-.u__no_drag {
-    user-drag: none;
-    -webkit-user-drag: none;
-}
-
 .u__no_margin {
     margin: 0 !important;
 }
-
 .u__100vh {
     min-height: 100vh;
     min-width: 100vw;
 }
-
 .u__pointer {
     cursor: pointer;
 }
-
 .u__no_padding {
     padding: 0 !important;
 }
-
 .u__small_margin_vertical {
     margin: 1em 0 !important;
 }
-
 .u__big_margin_vertical {
     margin: 3em 0;
 }
-
 .u__small_padding {
     padding: 1em 0;
 }
-
 .u__small_margin_bottom {
     margin: 0 0 1em 0;
 }
@@ -80,33 +71,14 @@ a {
 .u__text_center {
     text-align: center;
 }
-
 .u__main_box_shadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.2);
 }
-
 .u__normal_font {
     font-weight: normal;
 }
 
-.u__title_font {
-    font-family: 'Cinzel Decorative', cursive;
-}
-
 /* COLORS */
-
-
-.black_color {
-    background: #181818;
-}
-
-.black_color_text {
-    color: #181818;
-}
-
-.gray_color_text {
-    color: #637382;
-}
 .white_color_text{
     color: white;
 }
