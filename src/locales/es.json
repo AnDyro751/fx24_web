@@ -1,5 +1,11 @@
 {
   "es": {
+    "fields": {
+      "name": "Nombre",
+      "username": "Nombre de usuario",
+      "email": "Correo electrónico",
+      "password": "Contraseña"
+    },
     "indexPage": {
       "title": ""
     }

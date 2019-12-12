@@ -2,8 +2,8 @@ import React, { useState, useContext } from 'react';
 import { useFirebase } from 'gatsby-plugin-firebase';
 import Layout from '../layouts/Main';
 import { User } from '../contexts/User';
-import SEO from '../components/seo';
-import { es } from '../locales/es.json';
+import Unauthenticated from '../virtual_pages/Index/Unauthenticated';
+import Authenticated from '../virtual_pages/Index/Authenticated';
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
@@ -22,14 +22,11 @@ const IndexPage = () => {
 
   return (
     <Layout loading={loading} isAuth={isAuth}>
-      <>
-        <SEO title={es.indexPage.title} />
-        {isAuth ? (
-          null
-        ) : (
-          null
-        )}
-      </>
+      {isAuth ? (
+        <Authenticated />
+      ) : (
+        <Unauthenticated />
+      )}
     </Layout>
   );
 };

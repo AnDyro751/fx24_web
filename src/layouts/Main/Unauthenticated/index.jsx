@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UnauthenticatedMainLayout = ({ children }) => {
-  return null;
+  return children;
 };
 
 export default UnauthenticatedMainLayout;

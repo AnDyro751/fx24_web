@@ -1,6 +1,3 @@
-* {
-    color: #181818;
-}
 html,
 body {
     margin: 0;
@@ -28,6 +25,7 @@ a {
     font-family: 'Alata', sans-serif;
     margin: 0 !important;
     text-decoration: none;
+    color: #181818;
 }
 small {
     color: #637382;
@@ -38,7 +36,26 @@ small {
 .main_font {
     font-family: 'Alata', sans-serif;
 }
-
+input, textarea {
+	width: 100%;
+	max-width: 100%;
+	padding: 0.7em;
+	outline: none;
+	background: #e9ebee;
+	border-radius: 4px;
+	font-size: 1.3em;
+	font-weight: normal;
+	border: 1px solid transparent;
+}
+input::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	opacity: 1;
+	font-weight: normal;
+}
+input:focus {
+	background: white;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
 .u__no_select {
     user-select: none;
 }
@@ -95,7 +112,3 @@ small {
     background: #e79128;
 }
 /* END COLORS */
-
-
-
-

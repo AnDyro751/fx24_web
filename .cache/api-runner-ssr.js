@@ -8,9 +8,6 @@ var plugins = [{
       plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-facebook-pixel/gatsby-ssr'),
       options: {"plugins":[],"pixelId":"2470687473147176"},
     },{
-      plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":[{"family":"Cinzel Decorative:","variants":["900"]},{"family":"Alata"}]},
-    },{
       plugin: require('/Users/schorts/Documents/FX 24/Web/node_modules/gatsby-plugin-firebase/gatsby-ssr'),
       options: {"plugins":[],"features":{"auth":true,"database":false,"firestore":true,"storage":false,"messaging":true,"functions":false,"remoteConfig":true,"config":true,"analytics":true}},
     },{
