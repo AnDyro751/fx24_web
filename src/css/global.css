@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: 'Alata', sans-serif;
     overflow-x: hidden;
     background: white;
     scrollbar-width: none;
@@ -105,8 +104,8 @@ input:focus {
 }
 
 /* Area */
-.full_height {
-    height: 100vh;
+.min_full_height {
+    min-height: 100vh;
 }
 
 /* Decorations */

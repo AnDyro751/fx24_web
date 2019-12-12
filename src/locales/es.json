@@ -23,7 +23,9 @@
         "signUp": {
           "title": "Regístrate",
           "message": "Crea una cuenta en FX 24 para acceder a todo el contenido",
-          "button": "Regístrate"
+          "acceptance": "Al registrarte aceptas los términos y condiciones del servicio.",
+          "button": "Regístrate",
+          "signIn": "¿Ya tienes una cuenta? Ingresa"
         }
       }
     }

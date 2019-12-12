@@ -6,7 +6,7 @@ const TextInput = ({
   label, required, name, type, autoComplete, placeholder, spellCheck, onChange, minLength,
   maxLength, inputMode, value, style,
 }) => (
-  <div style={style.container} className={`row u__no_margin ${styles.input_container}`}>
+  <div style={style.container} className="row u__no_margin">
     <div className="col-12 u__no_padding">
       <p className={styles.input_label}>{label}</p>
     </div>

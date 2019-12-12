@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import styles from '../style.module.css';
 import TextField from '../../Inputs/Text';
 import { es } from '../../../locales/es.json';
+import { validateName, validateUsername } from '../../../utils/validations';
+import { removeExtraWhiteSpaces } from '../../../utils/formatStrings';
 
 const SignUpForms = () => {
   const [fields, setFields] = useState({
@@ -16,6 +19,40 @@ const SignUpForms = () => {
       ...fields,
       [target.name]: target.value,
     });
+  };
+
+  const validateInfo = () => {
+    if (fields.name.length >= 3 && fields.name.length <= 20) {
+      if (validateName(fields.name)) {
+        handleChange({
+          target: {
+            name: 'name',
+            value: removeExtraWhiteSpaces(fields.name),
+          },
+        });
+        if (fields.username.length >= 1 && fields.username.length <= 15) {
+          if (validateUsername(fields.username)) {
+            if (true) { // Validar disponibilidad
+              return true;
+            }
+            // Error de disponibilidad username
+          }
+        } else {
+          // Error longitud username
+        }
+      } else {
+        // Error formato de nombre
+      }
+    } else {
+      // Error longitud de nombre
+    }
+    return false;
+  };
+
+  const handleCreateUser = () => {
+    if (validateInfo()) {
+      // Mandar a firebase para validar email y contraseña
+    }
   };
 
   return (
@@ -84,10 +121,20 @@ const SignUpForms = () => {
           required
           type="password"
         />
-        <div className="row justify-content-end u__no_margin" style={{ paddingTop: '1.5em' }}>
-          <button type="button" className="with_elevation">
+        <div className="row u__no_margin" style={{ padding: '1.5em 0 1em 0' }}>
+          <div className="col-12 u__no_padding">
+            <small style={{ fontSize: '1em' }}>{es.components.forms.signUp.acceptance}</small>
+          </div>
+        </div>
+        <div className="row justify-content-center u__no_margin align-items-center">
+          <button type="button" className="with_elevation col-12" onClick={handleCreateUser}>
             {es.components.forms.signUp.button}
           </button>
+          <div className="col-auto u__no_padding" style={{ marginTop: '0.5em' }}>
+            <Link to="/sign-in">
+              {es.components.forms.signUp.signIn}
+            </Link>
+          </div>
         </div>
       </div>
     </form>
