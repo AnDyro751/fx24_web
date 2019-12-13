@@ -6,7 +6,7 @@ import { FirebaseContext } from 'gatsby-plugin-firebase';
 import styles from '../style.module.css';
 import TextField from '../../Inputs/Text';
 import { es } from '../../../locales/es.json';
-import { validateName, validateUsername } from '../../../utils/validations';
+import { validateName, validateUsername, validateEmail } from '../../../utils/validations';
 import { removeExtraWhiteSpaces } from '../../../utils/formatStrings';
 
 const SignUpForms = () => {
@@ -37,16 +37,34 @@ const SignUpForms = () => {
         });
         if (fields.username.length >= 1 && fields.username.length <= 15) {
           if (validateUsername(fields.username)) {
-            firebase.firestore().collection('users').where('username', '==', fields.username).get()
-              // eslint-disable-next-line consistent-return
-              .then(({ docs }) => {
-                if (docs.length === 0) {
-                  return true;
+            if (fields.email.length >= 10 && fields.email.length <= 40) {
+              if (validateEmail(fields.email)) {
+                if (fields.password.length >= 6 && fields.password.length <= 15) {
+                  firebase.firestore().collection('users').where('username', '==', fields.username).get()
+                    // eslint-disable-next-line consistent-return
+                    .then(({ docs }) => {
+                      if (docs.length === 0) {
+                        return true;
+                      }
+                      if (!toast.isActive(currentToast)) {
+                        setCurrentToast(toast.error(es.fields.username.errors.taken));
+                      }
+                    });
+                } else {
+                  if (!toast.isActive(currentToast)) {
+                    setCurrentToast(toast.error(es.fields.password.errors.length));
+                  }
                 }
+              } else {
                 if (!toast.isActive(currentToast)) {
-                  setCurrentToast(toast.error(es.fields.username.errors.taken));
+                  setCurrentToast(toast.error(es.fields.email.errors.invalid));
                 }
-              });
+              }
+            } else {
+              if (!toast.isActive(currentToast)) {
+                setCurrentToast(toast.error(es.fields.email.errors.invalid));
+              }
+            }
           }
         } else {
           if (!toast.isActive(currentToast)) {

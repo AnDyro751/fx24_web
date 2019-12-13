@@ -29,6 +29,7 @@
         "label": "Contraseña",
         "placeholder": "******",
         "errors": {
+          "length": "Tu contraseña debe contener entre 6 y 15 carácteres",
           "weak": "Tu contraseña es muy debil"
         }
       },
