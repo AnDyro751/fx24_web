@@ -1,5 +1,7 @@
+/* eslint-disable no-lonely-if */
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import { toast } from 'react-toastify';
 import styles from '../style.module.css';
 import TextField from '../../Inputs/Text';
 import { es } from '../../../locales/es.json';
@@ -13,6 +15,7 @@ const SignUpForms = () => {
     username: '',
     password: '',
   });
+  const [currentToast, setCurrentToast] = useState();
 
   const handleChange = ({ target }) => {
     setFields({
@@ -35,16 +38,24 @@ const SignUpForms = () => {
             if (true) { // Validar disponibilidad
               return true;
             }
-            // Error de disponibilidad username
+            if (!toast.isActive(currentToast)) {
+              setCurrentToast(toast.error(es.fields.username.errors.taken));
+            }
           }
         } else {
-          // Error longitud username
+          if (!toast.isActive(currentToast)) {
+            setCurrentToast(toast.error(es.fields.username.errors.length));
+          }
         }
       } else {
-        // Error formato de nombre
+        if (!toast.isActive(currentToast)) {
+          setCurrentToast(toast.error(es.fields.name.errors.format));
+        }
       }
     } else {
-      // Error longitud de nombre
+      if (!toast.isActive(currentToast)) {
+        setCurrentToast(toast.error(es.fields.name.errors.length));
+      }
     }
     return false;
   };

@@ -3,11 +3,19 @@
     "fields": {
       "name": {
         "label": "Nombre",
-        "placeholder": "Richard Hendricks"
+        "placeholder": "Richard Hendricks",
+        "errors": {
+          "length": "El nombre debe contener entre 3 y 20 letras",
+          "format": "El nombre debe tener un formato válido"
+        }
       },
       "username": {
         "label": "Nombre de usuario",
-        "placeholder": "richardhen"
+        "placeholder": "richardhen",
+        "errors": {
+          "length": "Tu nombre de usuario debe contener entre 1 y 15 carácteres",
+          "taken": "Este nombre de usuario ya le pertenece a alguien más"
+        }
       },
       "email": {
         "label": "Correo electrónico",

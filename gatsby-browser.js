@@ -11,5 +11,6 @@ export const wrapRootElement = ({ element }) => (
 );
 
 wrapRootElement.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   element: PropTypes.object.isRequired,
 };
