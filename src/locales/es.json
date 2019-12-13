@@ -19,11 +19,21 @@
       },
       "email": {
         "label": "Correo electrónico",
-        "placeholder": "richard@piedpiper.com"
+        "placeholder": "richard@piedpiper.com",
+        "errors": {
+          "taken": "Este correo ya le pertenece a alguien más",
+          "invalid": "Este correo no es válido"
+        }
       },
       "password": {
         "label": "Contraseña",
-        "placeholder": "******"
+        "placeholder": "******",
+        "errors": {
+          "weak": "Tu contraseña es muy debil"
+        }
+      },
+      "errors": {
+        "internalError": "Hubo un error interno. Intenta de nuevo más tarde"
       }
     },
     "components": {

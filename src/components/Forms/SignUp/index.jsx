@@ -1,7 +1,8 @@
 /* eslint-disable no-lonely-if */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'gatsby';
 import { toast } from 'react-toastify';
+import { FirebaseContext } from 'gatsby-plugin-firebase';
 import styles from '../style.module.css';
 import TextField from '../../Inputs/Text';
 import { es } from '../../../locales/es.json';
@@ -9,6 +10,7 @@ import { validateName, validateUsername } from '../../../utils/validations';
 import { removeExtraWhiteSpaces } from '../../../utils/formatStrings';
 
 const SignUpForms = () => {
+  const firebase = useContext(FirebaseContext);
   const [fields, setFields] = useState({
     name: '',
     email: '',
@@ -35,12 +37,16 @@ const SignUpForms = () => {
         });
         if (fields.username.length >= 1 && fields.username.length <= 15) {
           if (validateUsername(fields.username)) {
-            if (true) { // Validar disponibilidad
-              return true;
-            }
-            if (!toast.isActive(currentToast)) {
-              setCurrentToast(toast.error(es.fields.username.errors.taken));
-            }
+            firebase.firestore().collection('users').where('username', '==', fields.username).get()
+              // eslint-disable-next-line consistent-return
+              .then(({ docs }) => {
+                if (docs.length === 0) {
+                  return true;
+                }
+                if (!toast.isActive(currentToast)) {
+                  setCurrentToast(toast.error(es.fields.username.errors.taken));
+                }
+              });
           }
         } else {
           if (!toast.isActive(currentToast)) {
@@ -62,7 +68,35 @@ const SignUpForms = () => {
 
   const handleCreateUser = () => {
     if (validateInfo()) {
-      // Mandar a firebase para validar email y contraseña
+      firebase.auth().createUserWithEmailAndPassword(fields.email, fields.password)
+        .then(() => {
+          firebase.firestore().collection('users').add({
+            username: fields.username,
+            name: fields.name,
+          });
+        }).catch(({ code }) => {
+          switch (code) {
+            case 'email-already-in-use':
+              if (!toast.isActive(currentToast)) {
+                setCurrentToast(toast.error(es.fields.email.errors.taken));
+              }
+              break;
+            case 'invalid-email':
+              if (!toast.isActive(currentToast)) {
+                setCurrentToast(toast.error(es.fields.email.errors.invalid));
+              }
+              break;
+            case 'weak-password':
+              if (!toast.isActive(currentToast)) {
+                setCurrentToast(toast.error(es.fields.password.errors.weak));
+              }
+              break;
+            default:
+              if (!toast.isActive(currentToast)) {
+                setCurrentToast(toast.error(es.fields.errors.internalError));
+              }
+          }
+        });
     }
   };
 
