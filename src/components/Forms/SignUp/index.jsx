@@ -91,6 +91,7 @@ const SignUpForms = () => {
           firebase.firestore().collection('users').add({
             username: fields.username,
             name: fields.name,
+            status: 'pending',
           });
         }).catch(({ code }) => {
           switch (code) {
